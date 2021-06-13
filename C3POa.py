@@ -104,17 +104,17 @@ def remove_files(path, pattern):
         shutil.rmtree(d)
 
 def rounding(x, base):
-    '''Rounds to the nearest base, we use 50'''
+    '''Rounds to the nearest base, we use 50'''  #round to nearest 50, e.g. 0, 50, 100, 150, etc (e.g. 59 becomes 50)
     return int(base * round(float(x) / base))
 
 def analyze_reads(args, reads, splint_dict, adapter_dict, adapter_set, iteration, racon):
     penalty, iters, window, order = 20, 3, 41, 2
     for read in reads:
-        name, seq, qual = read[0], read[1], read[2]
+        name, seq, qual = read[0], read[1], read[2]   
         seq_len = len(seq)
-        if not adapter_dict.get(name):
+        if not adapter_dict.get(name):     #dict.get('key')=value
             continue
-        strand = adapter_dict[name][1]
+        strand = adapter_dict[name][1]     #dict['key'][indx] because the values of the 'key' is a list, etc
         if strand == '-':
             # use reverse complement of the splint
             splint = splint_dict[adapter_dict[name][0]][1]
