@@ -19,7 +19,8 @@ def parse_args():
     return parser.parse_args()
 
 args = parse_args()
-inFile =args.input_file
+print(args)
+#inFile =args.input_file
 
 
 
@@ -43,5 +44,5 @@ def zero_repeat(inFile):
   print('%s of total reads has zero repeats'%percent_zero_repeat)
   return percent_zero_repeat
 
-zero_repeat(inFile)
+#zero_repeat(inFile)
 
