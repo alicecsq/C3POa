@@ -5,15 +5,6 @@ import os
 import sys 
 
 
-def parse_args():
-    '''Parses arguments.'''
-    
-    
-    if len(sys.argv) == 1:
-        parser.print_help()
-        sys.exit(0)
-    return parser.parse_args()
-args = parse_args()
 parser = argparse.ArgumentParser(description='calculate % total R2C2 reads with zero repeats.',
                                      add_help=True,
                                      prefix_chars='-')
