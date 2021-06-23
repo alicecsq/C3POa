@@ -3,9 +3,7 @@
 
 import os 
 import sys 
-/mithril/Data/Nanopore/projects/visium/210309_r2c2_sample6_test/c3poa_output/UMI_Splint_1/
 
-path to 
 
 def parse_args():
     '''Parses arguments.'''
