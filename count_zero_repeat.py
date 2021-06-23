@@ -16,18 +16,17 @@ def parse_args():
     if len(sys.argv) == 1:
         parser.print_help()
         sys.exit(0)
+    #print(parser.parse_args())
     return parser.parse_args()
 
 args = parse_args()
-print(args)
-#inFile =args.input_file
-
+inFile =args.input_file
 
 
 def zero_repeat(inFile):
   read_count = 0
   count = 0
-  for line in open('inFile', 'r'):
+  for line in open(inFile):
     if line.startswith('>'):
         line=line.rstrip()
         subread=int(line.split('_')[3])
@@ -44,5 +43,4 @@ def zero_repeat(inFile):
   print('%s of total reads has zero repeats'%percent_zero_repeat)
   return percent_zero_repeat
 
-#zero_repeat(inFile)
-
+zero_repeat(inFile)
