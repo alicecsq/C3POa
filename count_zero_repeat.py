@@ -12,7 +12,7 @@ def parse_args():
                                      add_help=True,
                                      prefix_chars='-')
     parser.add_argument('--input_file', '-i', type=str, action='store',
-                        help='Fasta file with consensus called R2C2 reads (output from C3POa.py)')
+                        help='Fasta file with consensus called R2C2 reads (output from C3POa.py)')   #gives full path to 'R2C2_Consensus.fasta' generated from C3POa 
     if len(sys.argv) == 1:
         parser.print_help()
         sys.exit(0)
