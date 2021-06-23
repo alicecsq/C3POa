@@ -5,10 +5,8 @@ import os
 import sys 
 
 
-parser = argparse.ArgumentParser(description='calculate % total R2C2 reads with zero repeats.',
-                                     add_help=True,
-                                     prefix_chars='-')
-parser.add_argument('--input_file', '-i', type=str, action='store',
+parser = argparse.ArgumentParser()
+parser.add_argument('--input_file', '-i', type=str,
                         help='Fasta file with consensus called R2C2 reads (output from C3POa.py)')
 
 args=parser.parse_args()
