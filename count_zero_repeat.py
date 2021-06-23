@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(description='calculate % total R2C2 reads with 
                                      add_help=True,
                                      prefix_chars='-')
 parser.add_argument('--input_file', '-i', type=str, action='store',
-                        help='Fasta file with consensus called R2C2 reads (output from C3POa.py)'))
+                        help='Fasta file with consensus called R2C2 reads (output from C3POa.py)')
 
 args=parser.parse_args()
 inFile =args.input_file
